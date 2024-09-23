@@ -33,11 +33,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
         numero = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        Crear = new javax.swing.JButton();
+        Leer = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
+        Borrar = new javax.swing.JButton();
+        Limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(607, 300));
@@ -50,38 +50,38 @@ public class GUI extends javax.swing.JFrame {
 
         numero.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        jButton1.setText("Crear");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Crear.setText("Crear");
+        Crear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CrearActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Leer");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Leer.setText("Leer");
+        Leer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                LeerActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Actualizar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        Actualizar.setText("Actualizar");
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ActualizarActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Borrar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Borrar.setText("Borrar");
+        Borrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BorrarActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Limpiar");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Limpiar.setText("Limpiar");
+        Limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                LimpiarActionPerformed(evt);
             }
         });
 
@@ -91,26 +91,26 @@ public class GUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(82, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5)
-                .addContainerGap(82, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(166, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(numero)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Crear)
+                        .addGap(18, 18, 18)
+                        .addComponent(Leer)
+                        .addGap(18, 18, 18)
+                        .addComponent(Actualizar)
+                        .addGap(18, 18, 18)
+                        .addComponent(Borrar)
+                        .addGap(18, 18, 18)
+                        .addComponent(Limpiar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(numero)
+                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,18 +125,18 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(numero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(Crear)
+                    .addComponent(Leer)
+                    .addComponent(Actualizar)
+                    .addComponent(Borrar)
+                    .addComponent(Limpiar))
                 .addGap(44, 44, 44))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
             String data[] = {nombre.getText(), numero.getText()};
 
@@ -249,9 +249,9 @@ try {
     System.out.println("Número inválido: " + nef.getMessage());
 }
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ActualizarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
         // Obtener los datos del contacto
 String data[] = {nombre.getText(), numero.getText()};
 
@@ -325,9 +325,9 @@ try {
 }
 
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_CrearActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void LeerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeerActionPerformed
         // TODO add your handling code here:
       //  class DisplayFriends {
  
@@ -392,9 +392,9 @@ try {
             }
         
     
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_LeerActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarActionPerformed
         // TODO add your handling code here:
         
         String data[] = {nombre.getText(), numero.getText()};
@@ -497,14 +497,14 @@ try {
     System.out.println("Error de IO: " + ioe.getMessage());
 }
 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BorrarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void LimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimpiarActionPerformed
         // TODO add your handling code here:
         
         nombre.setText("");
         numero.setText("");
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_LimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -512,11 +512,11 @@ try {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton Actualizar;
+    private javax.swing.JButton Borrar;
+    private javax.swing.JButton Crear;
+    private javax.swing.JButton Leer;
+    private javax.swing.JButton Limpiar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField nombre;
