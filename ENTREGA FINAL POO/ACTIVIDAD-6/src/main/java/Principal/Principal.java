@@ -12,6 +12,8 @@ public class Principal {
 
     public static void main(String[] args) {
         
-        new GUI().setVisible(true);
+        GUI ventanaPrincipal = new GUI();
+        
+        ventanaPrincipal.setVisible(true);
     }
 }
