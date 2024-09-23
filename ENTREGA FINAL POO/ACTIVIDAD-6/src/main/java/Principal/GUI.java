@@ -305,6 +305,15 @@ try {
         // Mover el puntero al final del archivo
         raf.seek(raf.length());
 
+        // Verificar si es necesario agregar un salto de línea
+        if (raf.length() > 0) {
+            raf.seek(raf.length() - 1);
+            byte lastByte = raf.readByte();
+            if (lastByte != '\n') {
+                raf.writeBytes(System.lineSeparator());
+            }
+        }
+
         // Escribir el nuevo contacto en una nueva línea
         raf.writeBytes(nameNumberString);
         raf.writeBytes(System.lineSeparator());
@@ -323,6 +332,7 @@ try {
 } catch (NumberFormatException nef) {
     System.out.println("Formato de número inválido. Verifica que el número esté bien.");
 }
+
 
 
     }//GEN-LAST:event_CrearActionPerformed
